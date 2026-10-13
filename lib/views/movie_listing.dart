@@ -18,7 +18,10 @@ class MovieListing extends StatelessWidget {
       body: Container(
         child: Column(
           children: [
-            Text('demon slayer')
+            Text('demon slayer'),
+            Text('19 oct 2026'),
+            // Add a dropdown here
+            ElevatedButton(onPressed: (){}, child: Text('Add to basket'))
           ],
         )
       ),
