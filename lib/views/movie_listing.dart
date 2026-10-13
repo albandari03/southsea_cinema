@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:southsea_cinema/constants.dart';
 import 'package:southsea_cinema/widgets/nav_drawer.dart';
 
-class MovieListing extends StatelessWidget {
+class MovieListing extends StatefulWidget {
   const MovieListing({super.key});
 
+  @override
+  State<MovieListing> createState() => _MovieListingState();
+}
+
+class _MovieListingState extends State<MovieListing> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +26,9 @@ class MovieListing extends StatelessWidget {
             Text('demon slayer'),
             Text('19 oct 2026'),
             // Add a dropdown here
-            ElevatedButton(onPressed: (){}, child: Text('Add to basket'))
+            ElevatedButton(onPressed: (){
+              print("hello");
+            }, child: Text('Add to basket'))
           ],
         )
       ),
