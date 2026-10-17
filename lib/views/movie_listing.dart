@@ -10,6 +10,7 @@ class MovieListing extends StatefulWidget {
 }
 
 class _MovieListingState extends State<MovieListing> {
+  int _ticketQuantity = 1;
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -46,7 +47,6 @@ class _MovieListingState extends State<MovieListing> {
               style: TextStyle(color: cinemaFontWhite, fontSize: 16),
             ),
             const SizedBox(height: 16),
-            // Dropdown goes here
             ElevatedButton(
               onPressed: () {
                 print('Add to order button pressed');
