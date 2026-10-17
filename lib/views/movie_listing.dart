@@ -11,7 +11,7 @@ class MovieListing extends StatefulWidget {
 
 class _MovieListingState extends State<MovieListing> {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
         title: const Text(appTitle, style: cinemaHeaderStyle),
@@ -21,16 +21,40 @@ class _MovieListingState extends State<MovieListing> {
       ),
       drawer: const NavDrawer(),
       body: Container(
+        padding: const EdgeInsets.all(16.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('demon slayer'),
-            Text('19 oct 2026'),
-            // Add a dropdown here
-            ElevatedButton(onPressed: (){
-              print("hello");
-            }, child: Text('Add to basket'))
+            const Text(
+              'DEMON SLAYER: INFINITY CASTLE (15)',
+              style: TextStyle(color: cinemaFontWhite, fontSize: 24),
+            ),
+            const SizedBox(height: 12),
+            const Text(
+              'Runtime: 155 mins',
+              style: TextStyle(color: cinemaFontWhite, fontSize: 16),
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              'Tanjiro and the Demon Slayer Corps are pulled into '
+              'the Infinity Castle for their final battle against Muzan.',
+              style: TextStyle(color: cinemaFontWhite, fontSize: 16),
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              'Sunday 19 Oct 2026',
+              style: TextStyle(color: cinemaFontWhite, fontSize: 16),
+            ),
+            const SizedBox(height: 16),
+            // Dropdown goes here
+            ElevatedButton(
+              onPressed: () {
+                print('Add to order button pressed');
+              },
+              child: const Text('Add to order'),
+            ),
           ],
-        )
+        ),
       ),
     );
   }
